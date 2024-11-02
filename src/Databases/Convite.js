@@ -2,36 +2,40 @@ import { DataTypes } from 'sequelize';
 import { sequelize } from "./DataBaseConnection.js";
 // Importa a instância do Sequelizeconst User = sequelize.define('User', {
 
-const Evento = sequelize.define('evento', {
+const Convite = sequelize.define('convite', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    nome: {
-        type: DataTypes.STRING,
+    confirmados: {
+        type: DataTypes.INTEGER,
         allowNull: true,
     },
-    hash_organizador: {
+    convidados: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+    },
+    hash_evento: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    data: {
-        type: DataTypes.DATE,
-        allowNull: true,
-    },
-    forma_pagamento: {
+    senha: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    hash_name: {
+    hash_convite: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    presente: {
         type: DataTypes.STRING,
         allowNull: false,
     },
 }, {
-    tableName: 'evento',
+    tableName: 'convite',
     timestamps: false // Nome da tabela no banco de dados
 });
 
  // Exporta o modelo
- export {Evento};
+ export {Convite};

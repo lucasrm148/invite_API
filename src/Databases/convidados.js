@@ -23,10 +23,6 @@ const Convidados = sequelize.define('convidado', {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      contribuicao:{
-        type:DataTypes.DOUBLE,
-        allowNull:true,
-      }
   }, {
     tableName: 'Convidado',
     timestamps:false // Nome da tabela no banco de dados
