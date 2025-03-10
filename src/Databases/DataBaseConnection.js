@@ -1,6 +1,6 @@
 import { Sequelize } from 'sequelize';
 
-const sequelize = new Sequelize('invite', 'user_invite', 'Salmo 91:7', {
+const sequelize = new Sequelize('', '', '', {
     host: 'localhost',    // O host onde o banco de dados está rodando
     port: 3306,             // Porta do banco de dados
     dialect: 'mysql', 
